@@ -1,9 +1,7 @@
 import { defineConfig } from 'astro/config'
 import {storyblok} from '@storyblok/astro'
-import { loadEnv } from 'vite'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import netlify from '@astrojs/netlify';
-const env = loadEnv('', process.cwd(), 'STORYBLOK')
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
