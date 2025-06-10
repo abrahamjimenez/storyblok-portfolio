@@ -12,7 +12,7 @@ export default defineConfig({
 
   integrations: [
     storyblok({
-      accessToken: env.STORYBLOK_TOKEN,
+      accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
       apiOptions: {
         region: '',
       },
@@ -24,6 +24,7 @@ export default defineConfig({
         feature: 'storyblok/Feature',
         grid: 'storyblok/Grid',
         teaser: 'storyblok/Teaser',
+        header: 'storyblok/Header',
       },
     }),
   ],
