@@ -16,11 +16,18 @@ const { blok } = Astro.props
         ))}
     </div>
 
-    <Image src={blok.header_icon.filename}
+    <!--<Image src={blok.header_icon.filename}
            alt=""
            width={24}
            height={24}
            format="svg"
+           class="justify-self-end w-6 h-6"
+    />-->
+
+    <img src={blok.header_icon.filename}
+           alt=""
+           width={24}
+           height={24}
            class="justify-self-end w-6 h-6"
     />
 </div>
