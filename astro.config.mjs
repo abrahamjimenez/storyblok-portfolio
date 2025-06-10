@@ -4,6 +4,7 @@ import { loadEnv } from 'vite'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import netlify from '@astrojs/netlify';
 const env = loadEnv('', process.cwd(), 'STORYBLOK')
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +29,7 @@ export default defineConfig({
   ],
 
   vite: {
-    plugins: [basicSsl()],
+    plugins: [basicSsl(), tailwindcss()],
     server: {
       https: true,
     },
