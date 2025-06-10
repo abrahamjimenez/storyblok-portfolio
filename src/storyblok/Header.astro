@@ -1,0 +1,26 @@
+---
+import {Image} from "astro:assets"
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<div {...storyblokEditable(blok)} class="grid grid-cols-3 items-center">
+    <h3 class='justify-self-start ml-2 rtl:ml-0 rtl:mr-2 dark:text-white font-bold md:text-xl self-center text-2xl text-gray-900 whitespace-nowrap'>
+        {blok.header_title}
+    </h3>
+
+    <div class="flex gap-4 justify-self-center">
+        {blok.header_links.map((link) => (
+                <a href={`#${link.label.toLowerCase()}`} class="px-4 py-3">{link.label}</a>
+        ))}
+    </div>
+
+    <Image src={blok.header_icon.filename}
+           alt=""
+           width={24}
+           height={24}
+           format="svg"
+           class="justify-self-end w-6 h-6"
+    />
+</div>
