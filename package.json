@@ -23,5 +23,8 @@
       "esbuild",
       "sharp"
     ]
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.3.4"
   }
 }
