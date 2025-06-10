@@ -1,0 +1,15 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import { richTextResolver } from '@storyblok/richtext';
+
+const { blok } = Astro.props
+
+const { render } = richTextResolver();
+---
+
+<div {...storyblokEditable(blok)}>
+    <p>hero</p>
+    <p>{blok.eyebrow}</p>
+    <h1>{blok.headline}</h1>
+    <p set:html={render(blok.description)}></p>
+</div>

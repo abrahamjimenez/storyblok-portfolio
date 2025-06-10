@@ -19,6 +19,7 @@ export default defineConfig({
       components: {
         page: 'storyblok/Page',
         header: 'storyblok/Header',
+        hero: "storyblok/Hero"
       },
     }),
   ],
