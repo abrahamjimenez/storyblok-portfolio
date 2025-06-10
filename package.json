@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^6.0.2",
     "@storyblok/astro": "^7.0.0",
     "@storyblok/js": "^4.0.2",
     "@vitejs/plugin-basic-ssl": "^2.0.0",
@@ -24,8 +23,6 @@
     ]
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.3.4",
-    "@tailwindcss/vite": "^4.1.8",
-    "tailwindcss": "^4.1.8"
+    "@astrojs/netlify": "^6.3.4"
   }
 }

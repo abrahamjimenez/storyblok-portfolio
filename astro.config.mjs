@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config'
 import {storyblok} from '@storyblok/astro'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import netlify from '@astrojs/netlify';
-import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,16 +18,13 @@ export default defineConfig({
       },
       components: {
         page: 'storyblok/Page',
-        feature: 'storyblok/Feature',
-        grid: 'storyblok/Grid',
-        teaser: 'storyblok/Teaser',
         header: 'storyblok/Header',
       },
     }),
   ],
 
   vite: {
-    plugins: [basicSsl(), tailwindcss()],
+    plugins: [basicSsl()],
     server: {
       https: true,
     },
