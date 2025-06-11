@@ -21,6 +21,7 @@ export default defineConfig({
         header: 'storyblok/Header',
         hero: 'storyblok/Hero',
         about_me_section: 'storyblok/AboutMe',
+        word_experience_section: 'storyblok/WorkExperience',
       },
     }),
   ],
