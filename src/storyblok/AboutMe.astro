@@ -1,4 +1,5 @@
 ---
+import {Image} from "astro:assets";
 import { storyblokEditable } from '@storyblok/astro'
 import { richTextResolver } from '@storyblok/richtext';
 
@@ -8,7 +9,13 @@ const { render } = richTextResolver();
 ---
 
 <div {...storyblokEditable(blok)}>
-    <p>{blok.eyebrow}</p>
-    <h1>{blok.headline}</h1>
-    <p set:html={render(blok.description)}></p>
+    <h2>{blok.headline}</h2>
+    <p set:html={render(blok.description)} />
+
+    {blok.social_links.map((link) => (
+        <div>
+            <Image src={link.icon.filename} alt="" width={24} height={24} />
+            <p>{link.label}</p>
+        </div>
+    ))}
 </div>
