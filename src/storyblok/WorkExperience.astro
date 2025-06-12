@@ -13,7 +13,7 @@ const { render } = richTextResolver();
 
     {blok.work_experiences.map((work_experience) => (
         <div>
-            <Image src={work_experience.icon.filename} alt="" width={24} height={24} />
+            <img src={work_experience.icon.filename} alt="" width={24} height={24} />
             <h4>{work_experience.headline}</h4>
             <h5>{work_experience.subheading}</h5>
             <h6>{work_experience.date}</h6>

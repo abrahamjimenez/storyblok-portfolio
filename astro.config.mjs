@@ -36,5 +36,9 @@ export default defineConfig({
     },
   },
 
+  image: {
+    domains: ["a.storyblok.com"],
+  },
+
   adapter: netlify(),
 })

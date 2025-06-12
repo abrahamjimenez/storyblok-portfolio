@@ -14,7 +14,7 @@ const { render } = richTextResolver();
 
     {blok.social_links.map((link) => (
         <div>
-            <Image src={link.icon.filename} alt="" width={24} height={24} />
+            <img src={link.icon.filename} alt="" width={24} height={24} />
             <p>{link.label}</p>
         </div>
     ))}
