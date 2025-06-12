@@ -1,0 +1,21 @@
+---
+import {Image} from "astro:assets";
+import { storyblokEditable } from '@storyblok/astro'
+import { richTextResolver } from '@storyblok/richtext';
+
+const { blok } = Astro.props
+
+const { render } = richTextResolver();
+---
+
+<div {...storyblokEditable(blok)}>
+    <h2>{blok.headline}</h2>
+    <p>{blok.subheadline}</p>
+
+    {blok.skills.map((skill) => (
+        <div>
+            <h3>{skill.headline}</h3>
+            <p>{skill.description}</p>
+        </div>
+    ))}
+</div>

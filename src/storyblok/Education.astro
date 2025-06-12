@@ -1,0 +1,24 @@
+---
+import {Image} from "astro:assets";
+import { storyblokEditable } from '@storyblok/astro'
+import { richTextResolver } from '@storyblok/richtext';
+
+const { blok } = Astro.props
+
+const { render } = richTextResolver();
+---
+
+<div {...storyblokEditable(blok)}>
+    <h2>{blok.headline}</h2>
+
+    {blok.education_experiences.map((work_experience) => (
+        <div>
+            <Image src={work_experience.icon.filename} alt="" width={24} height={24} />
+            <h4>{work_experience.headline}</h4>
+            <h5>{work_experience.subheading}</h5>
+            <h6>{work_experience.date}</h6>
+
+            <p set:html={render(work_experience.job_description)} />
+        </div>
+    ))}
+</div>
